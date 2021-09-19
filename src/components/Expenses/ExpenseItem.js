@@ -13,14 +13,16 @@ const ExpenseItem = (props) => {
   const [amount, setAmount] = useState(props.amount)
 
   return (
-    <Card className="expense-item">
-      <ExpenseDate date={props.date} />
-      <div className="expense-item__description">
-        <h2>{title}</h2>
-        <div className="expense-item__price">${amount}</div>
-      </div>
-      <button onClick={clickHandler}>Change Title</button>
-    </Card>
+    <li>
+      <Card className="expense-item">
+        <ExpenseDate date={props.date} />
+        <div className="expense-item__description">
+          <h2>{title}</h2>
+          <div className="expense-item__price">${amount}</div>
+        </div>
+        <button onClick={clickHandler}>Change Title</button>
+      </Card>
+    </li>
   );
 };
 
